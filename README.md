@@ -1,71 +1,60 @@
-# 语雀 Codex 插件
+# LaoYutang Codex Plugins
 
-一个面向 ChatGPT 和 Codex 的语雀知识库插件。它将语雀 MCP 工具和一组可复用技能打包在一起，可以搜索、阅读、总结、整理和维护个人语雀知识库。
+这是一个可扩展的 ChatGPT / Codex 插件市场仓库。每个插件独立存放在 `plugins/<plugin-name>/`，统一由 `.agents/plugins/marketplace.json` 提供安装索引。
 
-## 功能
-
-- 使用自然语言搜索个人语雀知识库
-- 阅读并总结文档或知识库
-- 整理、润色和结构化笔记
-- 记录碎片想法和制作阅读笔记
-- 发现知识关联、检查过期内容和分析写作风格
-
-## 安装
-
-需要先安装 Node.js、npm，以及支持插件的 ChatGPT/Codex 桌面应用。
-
-添加这个 GitHub 插件市场：
+## 安装市场
 
 ```powershell
-codex plugin marketplace add LaoYutang/yuque-codex-plugin
+codex plugin marketplace add LaoYutang/codex-plugins
 ```
 
-重启桌面应用，在插件目录中选择 `LaoYutang Plugins`，然后安装“语雀”。
-
-## 配置语雀 Token
-
-插件通过环境变量 `YUQUE_PERSONAL_TOKEN` 读取你的个人语雀 Token。不要把 Token 写进仓库或提交到 Git。
-
-当前 PowerShell 会话临时设置：
+查看可用插件：
 
 ```powershell
-$env:YUQUE_PERSONAL_TOKEN = "你的语雀 Token"
+codex plugin list
 ```
 
-为当前 Windows 用户持久设置：
+## 可用插件
+
+| 插件 | 说明 | 版本 |
+| --- | --- | --- |
+| [语雀](plugins/yuque/) | 搜索、阅读、总结和整理个人语雀知识库 | 0.1.1 |
+
+安装语雀插件：
 
 ```powershell
-[Environment]::SetEnvironmentVariable(
-  "YUQUE_PERSONAL_TOKEN",
-  "你的语雀 Token",
-  "User"
-)
+codex plugin add yuque@laoyutang-plugins
 ```
 
-持久设置后请重新启动桌面应用。
+## 更新市场
 
-## 使用示例
+```powershell
+codex plugin marketplace upgrade laoyutang-plugins
+```
 
-- `@yuque 找找英维克空调的通讯协议`
-- `@yuque 总结这篇语雀文档`
-- `@yuque 帮我整理一下最近的想法`
+市场更新后，如需升级某个已安装插件，请重新安装该插件，并在新任务中使用：
 
-## 目录结构
+```powershell
+codex plugin add yuque@laoyutang-plugins
+```
+
+## 仓库结构
 
 ```text
-.agents/plugins/marketplace.json   GitHub 插件市场清单
-plugins/yuque/                     插件包
-  .codex-plugin/plugin.json        插件清单
-  .mcp.json                        语雀 MCP 配置
-  assets/icon.png                  插件图标
-  skills/                          语雀工作流技能
+.
+├── .agents/plugins/marketplace.json
+├── plugins/
+│   └── yuque/
+│       ├── .codex-plugin/plugin.json
+│       ├── .mcp.json
+│       ├── assets/
+│       ├── skills/
+│       └── README.md
+├── CONTRIBUTING.md
+└── README.md
 ```
 
-## 安全说明
-
-- 仓库只声明环境变量名称，不包含你的语雀 Token。
-- 每位使用者都应配置自己的 Token，并只授予必要权限。
-- 插件通过固定版本的 `yuque-mcp@1.0.0` npm 包连接语雀。
+新增插件时，在 `plugins/<plugin-name>/` 创建独立插件包，并向市场清单的 `plugins[]` 追加一项。具体步骤见 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
 ## License
 
