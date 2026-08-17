@@ -1,0 +1,20 @@
+{
+  "name": "laoyutang-plugins",
+  "interface": {
+    "displayName": "LaoYutang Plugins"
+  },
+  "plugins": [
+    {
+      "name": "yuque",
+      "source": {
+        "source": "local",
+        "path": "./plugins/yuque"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

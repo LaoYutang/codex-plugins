@@ -1,0 +1,41 @@
+{
+  "name": "yuque",
+  "version": "0.1.0",
+  "description": "Search, read, summarize, organize, and maintain personal Yuque knowledge bases.",
+  "author": {
+    "name": "LaoYutang",
+    "url": "https://github.com/LaoYutang"
+  },
+  "homepage": "https://github.com/LaoYutang/yuque-codex-plugin#readme",
+  "repository": "https://github.com/LaoYutang/yuque-codex-plugin",
+  "license": "MIT",
+  "keywords": [
+    "yuque",
+    "knowledge-base",
+    "notes",
+    "search"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "\u8bed\u96c0",
+    "shortDescription": "\u641c\u7d22\u3001\u9605\u8bfb\u548c\u6574\u7406\u4f60\u7684\u8bed\u96c0\u77e5\u8bc6\u5e93\u3002",
+    "longDescription": "\u901a\u8fc7\u8bed\u96c0 MCP \u641c\u7d22\u548c\u8bfb\u53d6\u4e2a\u4eba\u77e5\u8bc6\u5e93\uff0c\u5e76\u63d0\u4f9b\u6587\u6863\u603b\u7ed3\u3001\u7b14\u8bb0\u6da6\u8272\u3001\u788e\u7247\u8bb0\u5f55\u3001\u77e5\u8bc6\u5173\u8054\u3001\u9605\u8bfb\u7b14\u8bb0\u3001\u8fc7\u671f\u68c0\u67e5\u548c\u5199\u4f5c\u98ce\u683c\u5206\u6790\u3002",
+    "developerName": "LaoYutang",
+    "category": "Productivity",
+    "websiteURL": "https://github.com/LaoYutang/yuque-codex-plugin",
+    "capabilities": [
+      "Search",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "\u5728\u6211\u7684\u8bed\u96c0\u77e5\u8bc6\u5e93\u4e2d\u641c\u7d22\u76f8\u5173\u6587\u6863\u3002",
+      "\u603b\u7ed3\u8fd9\u7bc7\u8bed\u96c0\u6587\u6863\u7684\u6838\u5fc3\u8981\u70b9\u3002",
+      "\u6574\u7406\u5e76\u4f18\u5316\u6211\u7684\u8bed\u96c0\u7b14\u8bb0\u3002"
+    ],
+    "brandColor": "#25B864",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/icon.png"
+  }
+}
