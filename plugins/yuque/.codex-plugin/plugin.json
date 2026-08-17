@@ -1,13 +1,13 @@
 {
   "name": "yuque",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Search, read, summarize, organize, and maintain personal Yuque knowledge bases.",
   "author": {
     "name": "LaoYutang",
     "url": "https://github.com/LaoYutang"
   },
-  "homepage": "https://github.com/LaoYutang/yuque-codex-plugin#readme",
-  "repository": "https://github.com/LaoYutang/yuque-codex-plugin",
+  "homepage": "https://github.com/LaoYutang/codex-plugins/tree/main/plugins/yuque",
+  "repository": "https://github.com/LaoYutang/codex-plugins",
   "license": "MIT",
   "keywords": [
     "yuque",
@@ -23,7 +23,7 @@
     "longDescription": "\u901a\u8fc7\u8bed\u96c0 MCP \u641c\u7d22\u548c\u8bfb\u53d6\u4e2a\u4eba\u77e5\u8bc6\u5e93\uff0c\u5e76\u63d0\u4f9b\u6587\u6863\u603b\u7ed3\u3001\u7b14\u8bb0\u6da6\u8272\u3001\u788e\u7247\u8bb0\u5f55\u3001\u77e5\u8bc6\u5173\u8054\u3001\u9605\u8bfb\u7b14\u8bb0\u3001\u8fc7\u671f\u68c0\u67e5\u548c\u5199\u4f5c\u98ce\u683c\u5206\u6790\u3002",
     "developerName": "LaoYutang",
     "category": "Productivity",
-    "websiteURL": "https://github.com/LaoYutang/yuque-codex-plugin",
+    "websiteURL": "https://github.com/LaoYutang/codex-plugins/tree/main/plugins/yuque",
     "capabilities": [
       "Search",
       "Read",
