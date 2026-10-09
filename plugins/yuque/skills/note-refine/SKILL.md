@@ -2,6 +2,7 @@
 name: note-refine
 description: "Polish rough Yuque notes into structured, readable documents while preserving their meaning. Use when the user wants to clean up a draft, improve layout, or turn fragments into a document; trigger phrases include “帮我整理一下这篇笔记”, “把这个文档排版优化一下”, and “polish my notes”."
 license: MIT
+compatibility: Requires the yuque-mcp MCP server connected with a personal Yuque token
 metadata:
   author: yuque
   version: "1.0"

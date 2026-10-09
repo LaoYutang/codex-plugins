@@ -2,6 +2,7 @@
 name: stale-detector
 description: "Scan a Yuque knowledge base for stale or outdated documents and recommend updates or archiving. Use when the user is cleaning up, maintaining, or periodically reviewing a knowledge base; trigger phrases include “帮我检查哪些文档过期了”, “知识库体检”, and “find stale docs”."
 license: MIT
+compatibility: Requires the yuque-mcp MCP server connected with a personal Yuque token
 metadata:
   author: yuque
   version: "1.0"
@@ -22,6 +23,7 @@ Scan a Yuque knowledge base to discover documents that haven't been updated in a
 
 All tools are from the `yuque-mcp` server:
 
+- `yuque_get_user` — Get the current user's login name
 - `yuque_list_books` — List user's knowledge bases
 - `yuque_list_docs` — List all documents in a knowledge base with metadata
 - `yuque_get_doc` — Read document content for staleness analysis
@@ -35,12 +37,12 @@ All tools are from the `yuque-mcp` server:
 Extract `repo_id` (namespace) from the provided link or name.
 
 **Case B — User wants to scan all knowledge bases:**
-List all repos first:
+Call `yuque_get_user` to obtain the current user's `login`, then list all repos. The packaged `yuque-mcp@1.0.0` requires this login name, not a numeric user ID:
 
 ```
 Tool: yuque_list_books
 Parameters:
-  user_id: "<user_id>"
+  login: "<login from yuque_get_user>"
 ```
 
 Present the list and let the user choose, or scan them one by one if the user confirms.

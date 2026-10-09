@@ -2,9 +2,10 @@
 name: yuque
 description: "Unified entry point for personal Yuque knowledge bases. Use when the user mentions @yuque, $yuque, 语雀, or Yuque and wants to search, read, summarize, capture ideas, refine notes, connect documents, make reading notes, check stale content, or analyze writing style. Select the appropriate packaged workflow from the user's request."
 license: MIT
+compatibility: Requires the yuque-mcp MCP server connected with a personal Yuque token
 metadata:
   author: LaoYutang
-  version: "0.2.0"
+  version: "0.2.1"
 ---
 
 # Yuque — 语雀统一入口
@@ -32,7 +33,7 @@ If a request combines goals, run only the needed workflows in order; for example
 
 ## Use the connected tools
 
-1. Discover the tools exposed by the configured `yuque-mcp` server. Hosts may prefix tool names; use the available tool schema for the exact name and arguments.
+1. Discover the tools exposed by the configured `yuque-mcp` server. Hosts may prefix tool names; use the available tool schema for the exact name and arguments. In the packaged `yuque-mcp@1.0.0`, `yuque_list_books` requires `login`; obtain the current user's login name with `yuque_get_user` rather than using a numeric user ID.
 2. For a Yuque document URL, extract the knowledge-base namespace and document slug. For a title or topic, search first; do not guess a document ID.
 3. Search with `yuque_search`, read source content with `yuque_get_doc`, and use `yuque_list_books`, `yuque_get_book`, `yuque_list_docs`, or `yuque_get_toc` when the request needs a knowledge-base scope.
 4. Cite the actual document links when reporting facts from the knowledge base. If no relevant content is found, say so and try a small number of alternative keywords.

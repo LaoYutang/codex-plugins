@@ -7,7 +7,8 @@
         "yuque-mcp@1.0.0"
       ],
       "env_vars": [
-        "YUQUE_PERSONAL_TOKEN"
+        "YUQUE_PERSONAL_TOKEN",
+        "YUQUE_BASE_URL"
       ],
       "startup_timeout_sec": 30,
       "tool_timeout_sec": 60

@@ -2,6 +2,7 @@
 name: smart-search
 description: "Search personal Yuque knowledge bases with natural-language queries and synthesize answers with source links. Use when the user wants to find information in their own documents; trigger phrases include “搜一下我的文档”, “我的知识库里有没有...”, “搜索我的语雀/知识库”, and “search my Yuque”."
 license: MIT
+compatibility: Requires the yuque-mcp MCP server connected with a personal Yuque token
 metadata:
   author: yuque
   version: "2.0"
