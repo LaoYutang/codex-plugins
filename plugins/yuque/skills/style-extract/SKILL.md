@@ -2,6 +2,7 @@
 name: style-extract
 description: "Analyze Yuque documents to extract vocabulary, sentence, and tone patterns into a reusable writing-style profile. Use when the user wants to understand or reproduce their voice or keep documents consistent; trigger phrases include “分析一下我的写作风格”, “用我的风格写一篇...”, “帮我生成一个风格画像”, “extract my writing style”, and “write like me”."
 license: MIT
+compatibility: Requires the yuque-mcp MCP server connected with a personal Yuque token
 metadata:
   author: yuque
   version: "1.0"
@@ -23,6 +24,7 @@ Analyze your existing Yuque documents to extract your unique writing style — v
 
 All tools are from the `yuque-mcp` server:
 
+- `yuque_get_user` — Get the current user's login name
 - `yuque_list_books` — List user's knowledge bases
 - `yuque_list_docs` — List documents in a knowledge base
 - `yuque_get_doc` — Read document content for style analysis
@@ -44,8 +46,12 @@ User specifies a knowledge base. Sample documents from it.
 **Case C — Auto-detect best samples:**
 If the user isn't sure, search for their most substantial documents:
 
+Call `yuque_get_user` to obtain the current user's `login`. The packaged `yuque-mcp@1.0.0` requires this login name when listing knowledge bases:
+
 ```
 Tool: yuque_list_books
+Parameters:
+  login: "<login from yuque_get_user>"
 ```
 
 ```

@@ -2,6 +2,7 @@
 name: knowledge-connect
 description: "Analyze Yuque documents to uncover related topics, complementary notes, and cross-reference opportunities. Use when the user wants connections or a knowledge graph; trigger phrases include “帮我找找文档之间的关联”, “哪些笔记是相关的”, “这篇文档和哪些笔记有关”, “connect my notes”, and “find related documents”."
 license: MIT
+compatibility: Requires the yuque-mcp MCP server connected with a personal Yuque token
 metadata:
   author: yuque
   version: "1.0"
@@ -23,6 +24,7 @@ Analyze documents in your Yuque knowledge base, find hidden connections between 
 
 All tools are from the `yuque-mcp` server:
 
+- `yuque_get_user` — Get the current user's login name
 - `yuque_list_books` — List user's knowledge bases
 - `yuque_list_docs` — List all documents in a knowledge base
 - `yuque_get_doc` — Read document content for analysis
@@ -44,10 +46,12 @@ User specifies a knowledge base. Analyze all documents within it.
 **Case C — Across knowledge bases:**
 User wants cross-repo connections. Analyze documents across multiple repos.
 
-For Case B/C, first list available repos:
+For Case B/C, call `yuque_get_user` to obtain the current user's `login`, then list available repos. The packaged `yuque-mcp@1.0.0` requires this login name:
 
 ```
 Tool: yuque_list_books
+Parameters:
+  login: "<login from yuque_get_user>"
 ```
 
 Then list documents in the target repo(s):

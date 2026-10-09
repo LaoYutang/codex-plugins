@@ -2,6 +2,7 @@
 name: smart-summary
 description: "Summarize a Yuque document or knowledge base at one-line, key-point, or detailed granularity. Use when the user wants a quick overview of a document or repo; trigger phrases include “帮我总结一下这篇文档”, “这个知识库讲了什么”, and “summarize this doc”."
 license: MIT
+compatibility: Requires the yuque-mcp MCP server connected with a personal Yuque token
 metadata:
   author: yuque
   version: "1.0"
