@@ -1,0 +1,15 @@
+interface:
+  display_name: "yuque · 语雀"
+  short_description: "语雀统一入口：搜索、阅读、总结、记录想法和整理个人知识库"
+  brand_color: "#25B864"
+  default_prompt: "使用 $yuque 搜索、阅读或整理我的语雀知识库。"
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "yuque-mcp"
+      description: "通过语雀 MCP 搜索、读取和保存个人知识库文档"
+      transport: "stdio"
+
+policy:
+  allow_implicit_invocation: true

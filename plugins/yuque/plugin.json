@@ -1,0 +1,44 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "yuque",
+  "version": "0.2.0",
+  "description": "Search, read, summarize, organize, and maintain personal Yuque knowledge bases.",
+  "author": {
+    "name": "LaoYutang",
+    "url": "https://github.com/LaoYutang"
+  },
+  "homepage": "https://github.com/LaoYutang/codex-plugins/tree/main/plugins/yuque",
+  "repository": "https://github.com/LaoYutang/codex-plugins",
+  "license": "MIT",
+  "keywords": [
+    "yuque",
+    "knowledge-base",
+    "notes",
+    "search"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "语雀 (Yuque)",
+        "shortDescription": "搜索、阅读和整理你的语雀知识库。",
+        "longDescription": "通过语雀 MCP 搜索和读取个人知识库，并提供文档总结、笔记润色、碎片记录、知识关联、阅读笔记、过期检查和写作风格分析。",
+        "developerName": "LaoYutang",
+        "category": "Productivity",
+        "websiteURL": "https://github.com/LaoYutang/codex-plugins/tree/main/plugins/yuque",
+        "capabilities": [
+          "Search",
+          "Read",
+          "Write"
+        ],
+        "defaultPrompt": [
+          "在我的语雀知识库中搜索相关文档。",
+          "总结这篇语雀文档的核心要点。",
+          "整理并优化我的语雀笔记。"
+        ],
+        "brandColor": "#25B864",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/icon.png"
+      }
+    }
+  }
+}
